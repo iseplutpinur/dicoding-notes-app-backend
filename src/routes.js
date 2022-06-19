@@ -8,6 +8,16 @@ const {
 
 const routes = [
   {
+    method: 'GET',
+    path: '/',
+    handler: () => 'Hello World!',
+  },
+  {
+    method: '*',
+    path: '/{any*}',
+    handler: () => 'Halaman tidak ditemukan',
+  },
+  {
     method: 'POST',
     path: '/notes',
     handler: addNoteHandler,
